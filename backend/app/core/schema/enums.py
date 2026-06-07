@@ -14,3 +14,8 @@ class ConstraintStatus(StrEnum):
     RESOLVED = "resolved"
     REJECTED = "rejected"
     CONFLICTING = "conflicting"
+
+class AgentRunningState(StrEnum):
+    ACTIVE = "active"
+    COMPLETED = "completed"
+    FAILED = "failed"

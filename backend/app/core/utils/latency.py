@@ -1,5 +1,7 @@
 from core.utils.base import *
 
+# To be transferred in config later
+
 # Gemini pricing (as of 2026-07)
 # Per 1 million tokens
 INPUT_COST_PER_MILLION = 0.10   # USD
@@ -38,7 +40,9 @@ def calculate_cost(input_tokens: int, output_tokens: int):
     }
 
 
-
+# =========================
+# LATENCY DECORATOR (for sync & async func)
+# =========================
 def measure_latency(func):
 
     # --------------------------------------------------

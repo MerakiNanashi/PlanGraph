@@ -2,6 +2,7 @@ from pydantic import BaseModel, Field
 from typing import Any, Literal, Optional, TypeVar
 from typing import Generic, TypeVar
 from enum import StrEnum
+from datetime import datetime
 
 __all__ = [
     "BaseModel",
@@ -11,5 +12,6 @@ __all__ = [
     "Optional",
     "TypeVar",
     "Generic",
-    "StrEnum"
+    "StrEnum",
+    "datetime"
 ]

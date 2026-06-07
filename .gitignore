@@ -241,9 +241,15 @@ __marimo__/
 
 
 /backend/experiments/tests/
-/backend/app/domain/
 /backend/app/model/
 /backend/app/results/
 /backend/app/data/
 /backend/app/config/config.yaml
 /backend/app/config/config.py
+/backend/app/core/utils/retry_1.py
+
+/backend/app/domain/travel/
+/backend/app/domain/
+/backend/app/domain/.gitignore
+/backend/app/domain/README.md
+/backend/note.md

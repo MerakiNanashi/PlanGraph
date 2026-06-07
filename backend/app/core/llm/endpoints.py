@@ -5,10 +5,6 @@ import sys
 from google import genai
 from pathlib import Path 
 
-ROOT_DIR = Path(__file__).resolve().parent.parent.parent
-sys.path.append(str(ROOT_DIR))
-print(ROOT_DIR)
-# breakpoint()
 from core.utils import measure_latency
 
 

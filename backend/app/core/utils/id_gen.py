@@ -1,5 +1,6 @@
 from core.utils.base import uuid4
 
+# General ID gen with prefix
 def _generate(prefix: str) -> str:
     return f"{prefix}_{uuid4().hex}"
 

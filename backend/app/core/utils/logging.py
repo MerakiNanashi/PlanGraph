@@ -1,21 +1,26 @@
 from core.utils.base import logging
 
+# Function for logging setup
 def get_logger(
     name: str,
 ) -> logging.Logger:
 
     logger = logging.getLogger(name)
 
-    if not logger.handlers:
-        handler = logging.StreamHandler()
+    if logger.handlers:
+        return logger
 
-        formatter = logging.Formatter(
-            "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
-        )
+    handler = logging.StreamHandler()
 
-        handler.setFormatter(formatter)
-        logger.addHandler(handler)
+    formatter = logging.Formatter(
+        "%(asctime)s | %(name)s | %(levelname)s | %(message)s"
+    )
 
+    handler.setFormatter(formatter)
+
+    logger.addHandler(handler)
     logger.setLevel(logging.INFO)
+
+    logger.propagate = False
 
     return logger

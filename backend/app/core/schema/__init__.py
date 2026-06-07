@@ -1,18 +1,14 @@
 # core.schema/__init__.py
 
-import logging
+from core.utils import get_logger
 
 from core.schema.base import *
 
-from core.schema.candidate import Candidate, CandidateOutput
-from core.schema.constraint import Constraint, Query
+from core.schema.candidate import Candidate, CandidateOutput, AnchorOutput, ClusterOutput
 from core.schema.input import Input, Job
-from core.schema.extractor import ExtractorOutput
+from core.schema.extractor import ExtractorOutput, Constraint, Query
 from core.schema.state import PlanningState
 from core.schema.enums import Domain, ConstraintType, ConstraintStatus
-
-
-logger = logging.getLogger(__name__)
 
 
 __all__ = [
@@ -26,10 +22,9 @@ __all__ = [
     "PlanningState",
     "Domain",
     "ConstraintType",
-    "ConstraintStatus"
+    "ConstraintStatus",
+    "AnchorOutput",
+    "ClusterOutput"
 ]
 
-logger.debug(
-    "Loaded core.schema with %s",
-    __all__
-)
+get_logger(__name__).info("Core schema initialized")

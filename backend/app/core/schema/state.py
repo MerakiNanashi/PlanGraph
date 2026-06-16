@@ -1,9 +1,9 @@
-from core.schema.base import *
-from core.schema.candidate import CandidateOutput, Cluster, Anchor, Candidate
-from core.schema.extractor import Constraint, Query
-from core.schema.enums import Domain, AgentRunningState
-from core.schema.input import Input, Job
-from core.schema.workflow import AgentExecution
+from app.core.schema.base import *
+from app.core.schema.candidate import Candidate
+from app.core.schema.extractor import Constraint, Query
+from app.core.schema.enums import Domain, AgentRunningState
+from app.core.schema.input import Input
+from app.core.schema.workflow import AgentExecution
 
 # redundant for now
 class PlanningState(BaseModel):
@@ -46,7 +46,7 @@ class GlobalState(BaseModel):
         default_factory=dict
     )
 
-# Local Agent State
+# Local Agent State - purpose unclear
 class AgentState(BaseModel):
     agent_id: str
     running_state: AgentRunningState 
@@ -56,21 +56,7 @@ class AgentState(BaseModel):
     history: list = Field(
         default_factory=list
     )
-    output: Any | None
-
-if __name__ == "__main__":
-    # example usage
-    state = GlobalState(
-        run_id="123",
-        domain=Domain.TRAVEL,
-        input=Input(
-            run_id="123",
-            input="Find me a flight from NYC to LA next week",
-            domain=Domain.TRAVEL,
-            metadata={
-                "user_id": "user_123",
-                "timestamp": "2024-01-01T12:00:00Z"
-            }
-        )
+    metadata: dict = Field(
+        default_factory=dict
     )
-    print(state.model_dump_json(indent=4))
+    output: Any | None

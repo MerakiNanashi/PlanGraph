@@ -253,3 +253,8 @@ __marimo__/
 /backend/app/domain/.gitignore
 /backend/app/domain/README.md
 /backend/note.md
+
+
+/travelara-cd-v2/data/*
+/travelara-cd-v2/data/
+/travelara-cd-v2/

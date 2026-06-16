@@ -1,4 +1,4 @@
-from core.utils.base import *
+from app.core.utils.base import *
 
 # To be transferred in config later
 

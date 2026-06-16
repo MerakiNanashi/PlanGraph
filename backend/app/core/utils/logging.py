@@ -1,4 +1,4 @@
-from core.utils.base import logging
+from app.core.utils.base import logging
 
 # Function for logging setup
 def get_logger(

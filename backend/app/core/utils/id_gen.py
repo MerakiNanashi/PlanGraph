@@ -1,4 +1,4 @@
-from core.utils.base import uuid4
+from app.core.utils.base import uuid4
 
 # General ID gen with prefix
 def _generate(prefix: str) -> str:

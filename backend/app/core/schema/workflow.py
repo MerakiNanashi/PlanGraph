@@ -1,5 +1,5 @@
-from core.schema.base import *
-from core.schema.enums import AgentRunningState
+from app.core.schema.base import *
+from app.core.schema.enums import AgentRunningState
 
 T = TypeVar("T")
 
@@ -10,5 +10,6 @@ class AgentExecution(BaseModel):
     started_at: datetime | None = None
     completed_at: datetime | None = None
 
-class BaseWorkflow:
+class BaseWorkflow(BaseModel):
+    domain: str
     stages: list[type[T]]

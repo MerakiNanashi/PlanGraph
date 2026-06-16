@@ -1,4 +1,4 @@
-from core.utils.base import time
+from app.core.utils.base import time
 
 # In memory cache implementation with TTL (default: 1 hr)
 class Cache:

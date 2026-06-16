@@ -1,4 +1,4 @@
-from core.schema.base import *
+from app.core.schema.base import *
 
 class ClusterOutput(BaseModel):
     cluster_id: str

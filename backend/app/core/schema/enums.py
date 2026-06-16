@@ -1,4 +1,4 @@
-from core.schema.base import StrEnum
+from app.core.schema.base import StrEnum
 
 class Domain(StrEnum):
     TRAVEL = "travel"

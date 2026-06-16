@@ -5,7 +5,7 @@ import sys
 from google import genai
 from pathlib import Path 
 
-from core.utils import measure_latency
+from app.core.utils import measure_latency
 
 
 # -----------------------------
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
     # domain exclusive implementation
     from config.config import CONFIG_PATH, read_config, GEMINI_API_KEY, SERP_API_KEY, FS_API_KEY, YELP_FUSION_API_KEY
-    from core.schema import ExtractorOutput
+    from app.core.schema import ExtractorOutput
 
     config = read_config(CONFIG_PATH)
 

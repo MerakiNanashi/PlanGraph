@@ -1,5 +1,5 @@
-from core.utils.base import asyncio, wraps
-from core.utils.logging import get_logger
+from app.core.utils.base import asyncio, wraps
+from app.core.utils.logging import get_logger
 
 logger = get_logger(__name__)
 

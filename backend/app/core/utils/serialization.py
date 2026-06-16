@@ -1,4 +1,4 @@
-from core.utils.base import Path, json
+from app.core.utils.base import Path, json
 
 def dump_json(
     data,

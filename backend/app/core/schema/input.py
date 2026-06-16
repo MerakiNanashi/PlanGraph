@@ -1,5 +1,5 @@
-from core.schema.base import *
-from core.schema.enums import Domain
+from app.core.schema.base import *
+from app.core.schema.enums import Domain
 
 # Singleton input for the entire run, which can be used to store any relevant information about the run, such as the initial query, user preferences, etc. This can be used by the planner and other components to make informed decisions.
 class Input(BaseModel):
